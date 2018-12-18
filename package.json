@@ -1,0 +1,42 @@
+{
+  "name": "video-player-proxy",
+  "version": "1.0.0",
+  "description": "EggStream Video Player proxy",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "react-dev": "webpack -d --watch",
+    "server-dev": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ByeEric/Video-Player-Proxy.git"
+  },
+  "keywords": [
+    "eggs",
+    "YouTube",
+    "stream"
+  ],
+  "author": "Michael Nutt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ByeEric/Video-Player-Proxy/issues"
+  },
+  "homepage": "https://github.com/ByeEric/Video-Player-Proxy#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}
