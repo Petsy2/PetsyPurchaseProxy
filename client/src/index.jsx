@@ -1,13 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import PetImage from '../src/Components/pet_image';
 
-class App extends React.Component {
+class PetInfo extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            pet_id: 13124
+        }
+    }
     render() {
         return (
-            <div>App</div>
+            <div id="image-container">
+                <div>PETINFORMATIONFUCKYEAHPETS</div>
+                <PetImage />
+            </div>
         )
     }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<PetInfo />, document.getElementById('pet-info'));
