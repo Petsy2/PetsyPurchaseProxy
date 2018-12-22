@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import '../../../stylesheet.css';
 
 export default class PetDescription extends React.Component {
     constructor(props) {
@@ -7,9 +8,9 @@ export default class PetDescription extends React.Component {
 
     render() {
         return (
-            <div>
-                <h4 className='pet-description'>Description</h4>
-                <p>{this.props.description}</p>
+            <div className="pet-description-container">
+                <div className='pet-description-header'>Description</div>
+                <p className='pet-description'>{this.props.description}</p>
             </div>
         )
     }

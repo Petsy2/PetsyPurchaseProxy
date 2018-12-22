@@ -3,13 +3,8 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import PetImage from '../src/Components/pet_image';
 import PetDescription from '../src/Components/pet_description'
-import { Grid, Cell } from 'styled-css-grid';
-import styled from 'styled-components';
+import '../../stylesheet.css'
 
-const Image = styled.img`
-    width: 100%;
-    
-`
 
 class PetInfo extends React.Component {
     constructor() {
@@ -37,21 +32,21 @@ class PetInfo extends React.Component {
 
     render() {
         return (
-            <Grid columns={"100px 1fr 1fr 100px"} rows={"minmax(45px,auto) 1fr 1fr minmax(45px,auto)"}>
-                <Cell></Cell>
-                <Cell width={1}><h2>Pet Info</h2></Cell>
-                <Cell>
-                    <h3 className="pet-genus">{this.state.genus}</h3>
-                    <h3 className="pet-species">{this.state.species}</h3>
-                </Cell>
-                <Cell></Cell>
-                <Cell></Cell>
-                <Cell width={1}><PetImage /></Cell>
-                <Cell></Cell>
-                <Cell></Cell>
-                <Cell></Cell>
-                <Cell width={2}><PetDescription description={this.state.description} /></Cell>
-            </Grid>
+            <div className='grid-container'>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <PetImage className="pet-image-container" />
+                <div className="pet-name-container" >
+                    <div className="pet-species">{this.state.species}</div>
+                    <div className="pet-genus">Genus: {this.state.genus}</div>
+                </div>
+                <div></div>
+                <div></div>
+                <PetDescription description={this.state.description} />
+            </div>
         )
     }
 }
