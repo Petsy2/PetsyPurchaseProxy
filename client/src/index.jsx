@@ -13,7 +13,8 @@ class PetInfo extends React.Component {
             pet_id: 13124,
             genus: null,
             species: null,
-            description: null
+            description: null,
+            image_url: null
         }
     }
 
@@ -24,7 +25,8 @@ class PetInfo extends React.Component {
                 this.setState({
                     genus: response.data.genus,
                     species: response.data.species,
-                    description: response.data.description
+                    description: response.data.description,
+                    image_url: response.data.image_url
                 })
             })
     }
@@ -38,7 +40,7 @@ class PetInfo extends React.Component {
                 <div></div>
                 <div></div>
                 <div></div>
-                <PetImage className="pet-image-container" />
+                <PetImage className="pet-image-container" image_url={this.state.image_url} />
                 <div className="pet-name-container" >
                     <div className="pet-species">{this.state.species}</div>
                     <div className="pet-genus">Genus: {this.state.genus}</div>

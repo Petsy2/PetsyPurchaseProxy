@@ -2,9 +2,12 @@ import React from 'react';
 import '../../../stylesheet.css';
 
 export default class PetImage extends React.Component {
+    constructor(props) {
+        super(props)
+    }
     render() {
         return (
-            <img src="/test_images/13124.jpg" className="pet-image" ></img>
+            <img src={this.props.image_url} className="pet-image" ></img>
         )
     }
 }
