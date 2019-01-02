@@ -18,6 +18,8 @@ class PetInfo extends React.Component {
         }
     }
 
+
+
     componentDidMount() {
         axios.get('http://localhost:3000/api/info', { headers: { "pet_id": this.state.pet_id } })
             .then((response) => {

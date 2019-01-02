@@ -7,7 +7,6 @@ module.exports = {
         path: __dirname + '/client/dist',
         publicPath: '/'
     },
-    plugins: [new webpack.HotModuleReplacementPlugin()],
     devServer: {
         contentBase: './dist'
     },
