@@ -31,6 +31,7 @@ class PetInfo extends React.Component {
                     image_url: response.data.image_url
                 })
             })
+            .catch((err) => console.log('ERROR in client GET: ', err));
     }
 
 
