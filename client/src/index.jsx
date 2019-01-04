@@ -51,6 +51,7 @@ class PetInfo extends React.Component {
                 <div></div>
                 <div></div>
                 <PetDescription description={this.state.description} />
+                <Reviews pet_id={this.state.pet_id} />
             </div>
         )
     }
