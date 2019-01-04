@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import PetImage from '../src/Components/pet_image';
-import PetDescription from '../src/Components/pet_description'
+import PetDescription from '../src/Components/pet_description';
+import Reviews from '../src/Components/reviews';
 import '../../stylesheet.css'
 
 
