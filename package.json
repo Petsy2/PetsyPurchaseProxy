@@ -6,7 +6,9 @@
   "scripts": {
     "test": "test",
     "react-dev": "webpack --watch --hot --config ./webpack.config.js --mode development",
-    "server-dev": "nodemon server/index.js"
+    "server-dev": "nodemon server/index.js",
+    "restart": "pm2 startOrRestart ecosystem.config.js",
+    "deploy": "pm2 deploy ecosystem.config.js production"
   },
   "repository": {
     "type": "git",
@@ -40,6 +42,7 @@
   },
   "devDependencies": {
     "css-loader": "^2.0.2",
+    "pm2": "^3.2.4",
     "style-loader": "^0.23.1",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",
