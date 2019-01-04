@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import Review from './Review.jsx';
+import Review from './review.jsx';
 const baseURL = (document.URL === 'http://localhost:3003/' ? document.URL : 'http://ec2-18-191-41-4.us-east-2.compute.amazonaws.com/');
 
 class Reviews extends React.Component {
