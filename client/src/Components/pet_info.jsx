@@ -39,7 +39,7 @@ class PetInfo extends React.Component {
 
   changePetId(e) {
     const pet_id = e.detail.pet_id;
-    this.setState({ pet_id }, () => this.getPetReviews());
+    this.setState({ pet_id }, () => this.getPetInfo());
   }
 
   componentDidMount() {
