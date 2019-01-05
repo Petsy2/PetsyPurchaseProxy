@@ -15,9 +15,10 @@ class PetInfo extends React.Component {
       description: null,
       image_url: null
     };
+    this.getPetInfo = this.getPetInfo.bind(this);
   }
 
-  componentDidMount() {
+  getPetInfo() {
     axios
       .get(
         "http://ec2-52-90-48-243.compute-1.amazonaws.com:3000/api/info/" +
@@ -33,6 +34,10 @@ class PetInfo extends React.Component {
         });
       })
       .catch(err => console.log("ERROR in client GET: ", err));
+  }
+
+  componentDidMount() {
+    getPetInfo();
   }
 
   render() {
