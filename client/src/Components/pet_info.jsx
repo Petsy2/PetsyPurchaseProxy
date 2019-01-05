@@ -9,7 +9,7 @@ class PetInfo extends React.Component {
   constructor() {
     super();
     this.state = {
-      pet_id: 16235,
+      pet_id: 13124,
       genus: null,
       species: null,
       description: null,
