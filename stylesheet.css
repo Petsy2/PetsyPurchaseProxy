@@ -1,67 +1,57 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: rgb(255, 255, 255)
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(255, 255, 255);
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: 60px 450px 150px 60px;
-    grid-template-rows: 60px 325px 200px 60px;
-    grid-template-areas: ". . . ."
-                         ". image name ."
-                         ". description description ."
-                         ". . . . ";
-    grid-gap: 10px 10px;
-    justify-content: center
+  display: grid;
+  grid-template-columns: 60px 450px 150px 60px;
+  grid-template-rows: 60px 325px 200px 60px;
+  grid-template-areas:
+    ". . . ."
+    ". image name ."
+    ". description description ."
+    ". . . . ";
+  grid-gap: 10px 10px;
+  justify-content: center;
 }
 
 .pet-image {
-    grid-area: "image";
-    object-fit: contain;
-    justify-self: center;
-    align-self: end;
-    width: 100%;
-    max-height: 100%;
-    border-radius: 1%;
-    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 16px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 10px;
-    transition: transform .2s;
+  grid-area: "image";
+  object-fit: contain;
+  justify-self: center;
+  align-self: end;
+  width: 100%;
+  max-height: 100%;
+  border-radius: 1%;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 16px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 10px;
+  transition: transform 0.2s;
 }
 
 .pet-image:hover {
-    transform: scale(1.5);
+  transform: scale(1.5);
 }
 
-.pet-name-container {
-    grid-area: "name";
-    align-self: start;
-    padding-top: 25px;
-    padding-left: 12px;
-}
-
-.pet-genus {
-    font-size: 18px;
-    font-weight: 300;
-    padding-top: 7px;
-}
-
-.pet-species {
-    font-size: 24px;
-    font-weight: 300;
+#root {
+  grid-area: "name";
+  align-self: start;
+  padding-top: 25px;
+  padding-left: 12px;
 }
 
 .pet-description-container {
-    border-bottom: 1px solid rgba(20, 20, 20, 0.377);
+  border-bottom: 1px solid rgba(20, 20, 20, 0.377);
 }
 
 .pet-description {
-    grid-area: "description";
-    font-weight: 300;
+  grid-area: "description";
+  font-weight: 300;
 }
 
 .pet-description-header {
-    padding-top: 5px;
-    font-weight: 500;
-    font-size: 18px;
-    border-top: 1px solid rgba(20, 20, 20, 0.377);
+  padding-top: 5px;
+  font-weight: 500;
+  font-size: 18px;
+  border-top: 1px solid rgba(20, 20, 20, 0.377);
 }
