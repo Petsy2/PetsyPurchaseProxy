@@ -47,10 +47,7 @@ class PetInfo extends React.Component {
           className="pet-image-container"
           image_url={this.state.image_url}
         />
-        <div className="pet-name-container">
-          <div className="pet-species">{this.state.species}</div>
-          <div className="pet-genus">Genus: {this.state.genus}</div>
-        </div>
+        <div />
         <div />
         <div />
         <PetDescription description={this.state.description} />
