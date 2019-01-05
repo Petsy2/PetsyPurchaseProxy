@@ -36,8 +36,8 @@ body {
 .purchase-container {
   grid-area: "name";
   align-self: start;
-  padding-top: 25px;
-  padding-left: 12px;
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
 .pet-description-container {

@@ -16,6 +16,7 @@ class PetInfo extends React.Component {
       image_url: null
     };
     this.getPetInfo = this.getPetInfo.bind(this);
+    this.changePetId = this.changePetId.bind(this);
   }
 
   getPetInfo() {
@@ -36,13 +37,23 @@ class PetInfo extends React.Component {
       .catch(err => console.log("ERROR in client GET: ", err));
   }
 
+  changePetId(e) {
+    const pet_id = e.detail.pet_id;
+    this.setState({ pet_id }, () => this.getPetReviews());
+  }
+
   componentDidMount() {
+    this.div.addEventListener("changePetId", this.changePetId);
     this.getPetInfo();
+  }
+
+  componentWillUnmount() {
+    this.div.removeEventListener("changePetId", this.changePetId);
   }
 
   render() {
     return (
-      <div className="grid-container">
+      <div className="grid-container" ref={elem => (this.div = elem)}>
         <div />
         <div />
         <div />
