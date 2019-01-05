@@ -37,7 +37,7 @@ class PetInfo extends React.Component {
   }
 
   componentDidMount() {
-    getPetInfo();
+    this.getPetInfo();
   }
 
   render() {
