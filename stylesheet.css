@@ -33,7 +33,7 @@ body {
   transform: scale(1.5);
 }
 
-#root {
+.purchase-container {
   grid-area: "name";
   align-self: start;
   padding-top: 25px;

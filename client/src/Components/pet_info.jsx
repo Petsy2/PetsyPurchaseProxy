@@ -52,7 +52,9 @@ class PetInfo extends React.Component {
           className="pet-image-container"
           image_url={this.state.image_url}
         />
-        <div id="root" />
+        <div className="purchase-container">
+          <div id="root" />
+        </div>
         <div />
         <div />
         <PetDescription description={this.state.description} />
