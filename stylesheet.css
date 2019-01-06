@@ -21,7 +21,7 @@ body {
   object-fit: contain;
   justify-self: center;
   align-self: center;
-  width: 100%;
+  min-width: 100%;
   max-height: 325px;
   border-radius: 1%;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 16px 0 rgba(0, 0, 0, 0.19);
@@ -38,8 +38,8 @@ body {
   align-self: start;
   padding-top: 5px;
   padding-left: 5px;
-  object-fit: conatin;
-  max-height: 325px;
+  object-fit: conatin !important;
+  max-height: 325px !important;
 }
 
 .pet-description-container {
