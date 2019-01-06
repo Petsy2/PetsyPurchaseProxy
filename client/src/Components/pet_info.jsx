@@ -9,7 +9,7 @@ class PetInfo extends React.Component {
   constructor() {
     super();
     this.state = {
-      pet_id: 13124,
+      pet_id: 1112,
       genus: null,
       species: null,
       description: null,
@@ -26,7 +26,6 @@ class PetInfo extends React.Component {
           this.state.pet_id
       )
       .then(response => {
-        console.log("response to initial GET: ", response.data);
         this.setState({
           genus: response.data.genus,
           species: response.data.species,
@@ -38,13 +37,11 @@ class PetInfo extends React.Component {
   }
 
   changePetId(e) {
-    console.log("in changePetId: ", e.detail);
     const pet_id = e.detail.pet_id;
     this.setState({ pet_id }, () => this.getPetInfo());
   }
 
   componentDidMount() {
-    console.log("In componentDidMount");
     this.div.addEventListener("changePetId", this.changePetId);
     this.getPetInfo();
   }
@@ -68,9 +65,7 @@ class PetInfo extends React.Component {
           className="pet-image-container"
           image_url={this.state.image_url}
         />
-        <div className="purchase-container">
-          <div id="root" />
-        </div>
+        <div id="root" />
         <div />
         <div />
         <PetDescription description={this.state.description} />
