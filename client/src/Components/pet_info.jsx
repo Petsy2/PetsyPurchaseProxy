@@ -38,11 +38,13 @@ class PetInfo extends React.Component {
   }
 
   changePetId(e) {
+    console.log("in changePetId: ", e.detail);
     const pet_id = e.detail.pet_id;
     this.setState({ pet_id }, () => this.getPetInfo());
   }
 
   componentDidMount() {
+    console.log("In componentDidMount");
     this.div.addEventListener("changePetId", this.changePetId);
     this.getPetInfo();
   }
@@ -53,7 +55,10 @@ class PetInfo extends React.Component {
 
   render() {
     return (
-      <div className="grid-container" ref={elem => (this.div = elem)}>
+      <div
+        className="grid-container petIdSubscriber"
+        ref={elem => (this.div = elem)}
+      >
         <div />
         <div />
         <div />
