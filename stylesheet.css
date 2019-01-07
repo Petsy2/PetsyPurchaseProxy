@@ -5,7 +5,7 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 175px 450px 425px 60px;
+  grid-template-columns: 300px 450px 700px 60px;
   grid-template-rows: 60px 325px 180px 20px;
   grid-template-areas:
     ". . . ."
@@ -22,6 +22,7 @@ body {
   justify-self: center;
   align-self: center;
   min-width: 100%;
+  max-width: 445px;
   max-height: 325px;
   border-radius: 1%;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 16px 0 rgba(0, 0, 0, 0.19);
